@@ -76,7 +76,7 @@ public class TexasPoker {
         flag_B_1 = 0;
         flag_W_1 = 0;
         for (int i = 0; i < 3; i++) {
-            if(Black[i].getNum() == Black[i + 1].getNum() || Black[i].getNum() == Black[i + 2].getNum()){
+            if(Black[i].getNum() == Black[i + 1].getNum() && Black[i].getNum() == Black[i + 2].getNum()){
                 flag_B_1++;
             }
         }
@@ -84,7 +84,7 @@ public class TexasPoker {
             flag_B_3 = 4;
         }
         for (int i = 0; i < 3; i++) {
-            if(White[i].getNum() == White[i + 1].getNum() || White[i].getNum() == White[i + 2].getNum()){
+            if(White[i].getNum() == White[i + 1].getNum() && White[i].getNum() == White[i + 2].getNum()){
                 flag_W_1++;
             }
         }
@@ -191,7 +191,7 @@ public class TexasPoker {
                                 j++;
                                 continue;
                             }
-                            if (White[i].getNum() == W){
+                            if (White[j].getNum() == W){
                                 j--;
                                 i++;
                                 continue;
@@ -257,7 +257,7 @@ public class TexasPoker {
                                 j++;
                                 continue;
                             }
-                            if (White[i].getNum() == W_1 || White[i].getNum() == W_2){
+                            if (White[j].getNum() == W_1 || White[j].getNum() == W_2){
                                 j--;
                                 i++;
                                 continue;
