@@ -139,28 +139,23 @@ public class TexasPoker {
 
         //比较大小
         if (flag_B_3 > flag_W_3) {
-            System.out.println("Black wins");
-            return;
+            ResultOutput('B');
         }
         else if (flag_B_3 < flag_W_3) {
-            System.out.println("White wins");
-            return;
+            ResultOutput('W');
         }
         else{
             switch (flag_B_3){
                 case 1:{
                     for (int i = 4; i > -1; i--) {
                         if (Black[i].getNum() > White[i].getNum()) {
-                            System.out.println("Black wins");
-                            return;
+                            ResultOutput('B');
                         }
                         else if (Black[i].getNum() < White[i].getNum()){
-                            System.out.println("White wins");
-                            return;
+                            ResultOutput('W');
                         }
                         if (i == 1) {
-                            System.out.println("Tie");
-                            return;
+                            ResultOutput('T');
                         }
                     }
                 }break;
@@ -177,12 +172,10 @@ public class TexasPoker {
                         }
                     }
                     if (B > W) {
-                        System.out.println("Black wins");
-                        return;
+                        ResultOutput('B');
                     }
                     else if (B < W){
-                        System.out.println("White wins");
-                        return;
+                        ResultOutput('W');
                     }
                     else if (B == W) {
                         for (int i = 4, j = 4; i > -1 && j > -1; i--, j--) {
@@ -198,16 +191,13 @@ public class TexasPoker {
                             }
 
                             if (Black[i].getNum() > White[j].getNum()) {
-                                System.out.println("Black wins");
-                                return;
+                                ResultOutput('B');
                             }
                             else if (Black[i].getNum() < White[j].getNum()){
-                                System.out.println("White wins");
-                                return;
+                                ResultOutput('W');
                             }
                         }
-                        System.out.println("Tie");
-                        return;
+                        ResultOutput('T');
                     }
                 }break;
                 case 3:{
@@ -223,12 +213,10 @@ public class TexasPoker {
                         }
                     }
                     if (B_1 > W_1) {
-                        System.out.println("Black wins");
-                        return;
+                        ResultOutput('B');
                     }
                     else if (B_1 < W_1){
-                        System.out.println("White wins");
-                        return;
+                        ResultOutput('W');
                     }
                     /////
                     for (int i = 0; i < 4; i++) {
@@ -242,12 +230,10 @@ public class TexasPoker {
                         }
                     }
                     if (B_2 > W_2) {
-                        System.out.println("Black wins");
-                        return;
+                        ResultOutput('B');
                     }
                     else if (B_2 < W_2){
-                        System.out.println("White wins");
-                        return;
+                        ResultOutput('W');
                     }
                     /////
                     else if (B_1 == W_1 && B_2 == W_2) {
@@ -263,16 +249,13 @@ public class TexasPoker {
                                 continue;
                             }
                             if (Black[i].getNum() > White[j].getNum()) {
-                                System.out.println("Black wins");
-                                return;
+                                ResultOutput('B');
                             }
                             else if (Black[i].getNum() < White[j].getNum()){
-                                System.out.println("White wins");
-                                return;
+                                ResultOutput('W');
                             }
                         }
-                        System.out.println("Tie");
-                        return;
+                        ResultOutput('T');
                     }
                 }break;
                 case 4:{
@@ -288,64 +271,53 @@ public class TexasPoker {
                         }
                     }
                     if (B > W) {
-                        System.out.println("Black wins");
-                        return;
+                        ResultOutput('B');
                     }
                     else if (B < W){
-                        System.out.println("White wins");
-                        return;
+                        ResultOutput('W');
                     }
                     else if (B == W) {
-                        System.out.println("Tie");
-                        return;
+                        ResultOutput('T');
                     }
                 }break;
                 case 5:{
                     if (Black[4].getNum() > White[4].getNum()) {
-                        System.out.println("Black wins");
-                        return;
+                        ResultOutput('B');
                     }
                     else if (Black[4].getNum() < White[4].getNum()){
-                        System.out.println("White wins");
-                        return;
+                        ResultOutput('W');
                     }
                     else if (Black[4].getNum() == White[4].getNum()) {
-                        System.out.println("Tie");
-                        return;
+                        ResultOutput('T');
                     }
                 }break;
                 case 6:{
                     for (int i = 4; i > -1; i--) {
                         if (Black[i].getNum() > White[i].getNum()) {
-                            System.out.println("Black wins");
-                            return;
+                            ResultOutput('B');
                         }
                         else if (Black[i].getNum() < White[i].getNum()){
-                            System.out.println("White wins");
-                            return;
+                            ResultOutput('W');
                         }
-                        if (i == 1) {
-                            System.out.println("Tie");
-                            return;
+                        if (i == 0) {
+                            ResultOutput('T');
                         }
                     }
                 }break;
                 case 7:{
                     if (Black[4].getNum() > White[4].getNum()) {
-                        System.out.println("Black wins");
-                        return;
+                        ResultOutput('B');
                     }
-                    else if (Black[4].getNum() < White[4].getNum()){
-                        System.out.println("White wins");
-                        return;
+                    else if (Black[4].getNum() < White[4].getNum()) {
+                        ResultOutput('W');
                     }
                     else if (Black[4].getNum() == White[4].getNum()) {
-                        System.out.println("Tie");
-                        return;
+                        ResultOutput('T');
                     }
                 }break;
             }
         }
+        return;
     }
 
     public static int CharToInt(char x){
@@ -366,5 +338,18 @@ public class TexasPoker {
             default:; break;
         }
         return 0;
+    }
+
+    public static void ResultOutput(char ch){
+        if (ch == 'B') {
+            System.out.println("Black wins");
+        }
+        else if (ch == 'W') {
+            System.out.println("White wins");
+        }
+        else if (ch == 'T') {
+            System.out.println("Tie");
+        }
+        return;
     }
 }

@@ -104,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593088083512</updated>
-      <workItem from="1593088087488" duration="11176000" />
+      <workItem from="1593088087488" duration="13906000" />
     </task>
     <servers />
   </component>
@@ -124,30 +124,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="840" y="247" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1593089155515" />
-    <state width="1125" height="180" key="GridCell.Tab.0.bottom" timestamp="1593099937490">
+    <state width="1125" height="180" key="GridCell.Tab.0.bottom" timestamp="1593100530930">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1125" height="180" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593099937490" />
-    <state width="1125" height="180" key="GridCell.Tab.0.center" timestamp="1593099937489">
+    <state width="1125" height="180" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593100530930" />
+    <state width="1125" height="180" key="GridCell.Tab.0.center" timestamp="1593100530930">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1125" height="180" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593099937489" />
-    <state width="1125" height="180" key="GridCell.Tab.0.left" timestamp="1593099937489">
+    <state width="1125" height="180" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593100530930" />
+    <state width="1125" height="180" key="GridCell.Tab.0.left" timestamp="1593100530930">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1125" height="180" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593099937489" />
-    <state width="1125" height="180" key="GridCell.Tab.0.right" timestamp="1593099937489">
+    <state width="1125" height="180" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593100530930" />
+    <state width="1125" height="180" key="GridCell.Tab.0.right" timestamp="1593100530930">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1125" height="180" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593099937489" />
+    <state width="1125" height="180" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593100530930" />
     <state x="891" y="261" key="extract.method.dialog" timestamp="1593096013708">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="891" y="261" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1593096013708" />
-    <state x="652" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1593094828082">
+    <state x="652" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1593343855670">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="652" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1593094828082" />
+    <state x="652" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1593343855670" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TexasPoker$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1593091958602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
