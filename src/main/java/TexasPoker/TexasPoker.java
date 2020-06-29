@@ -47,93 +47,26 @@ public class TexasPoker {
         int flag_W_1 = 0, flag_B_2 = 0, flag_W_3 = 1;
 
         //测试对子
-        for (int i = 0; i < 4; i++) {
-            if(Black[i].getNum() == Black[i + 1].getNum()){
-                flag_B_1++;
-                i++;
-            }
-        }
-        if (flag_B_1 == 1) {
-            flag_B_3 = 2;
-        }
-        else if (flag_B_1 == 2) {
-            flag_B_3 = 3;
-        }
-        for (int i = 0; i < 4; i++) {
-            if(White[i].getNum() == White[i + 1].getNum()){
-                flag_W_1++;
-                i++;
-            }
-        }
-        if (flag_W_1 == 1) {
-            flag_W_3 = 2;
-        }
-        else if (flag_W_1 == 2) {
-            flag_W_3 = 3;
-        }
+        flag_B_3 = getFlag_3_P(Black, flag_B_1, flag_B_3);
+        flag_W_3 = getFlag_3_P(White, flag_W_1, flag_W_3);
 
         //测试三条
-        flag_B_1 = 0;
-        flag_W_1 = 0;
-        for (int i = 0; i < 3; i++) {
-            if(Black[i].getNum() == Black[i + 1].getNum() && Black[i].getNum() == Black[i + 2].getNum()){
-                flag_B_1++;
-            }
-        }
-        if (flag_B_1 == 1) {
-            flag_B_3 = 4;
-        }
-        for (int i = 0; i < 3; i++) {
-            if(White[i].getNum() == White[i + 1].getNum() && White[i].getNum() == White[i + 2].getNum()){
-                flag_W_1++;
-            }
-        }
-        if (flag_W_1 == 1) {
-            flag_W_3 = 4;
-        }
+        flag_B_3 = getFlag_3_T(Black, flag_B_1, flag_B_3);
+        flag_W_3 = getFlag_3_T(White, flag_W_1, flag_W_3);
 
         //测试顺子
-        flag_B_1 = 0;
-        flag_W_1 = 0;
-        for (int i = 0; i < 4; i++) {
-            if(Black[i].getNum() == Black[i + 1].getNum() - 1){
-                flag_B_1++;
-            }
-            if(White[i].getNum() == White[i + 1].getNum() - 1) {
-                flag_W_1++;
-            }
-        }
-
-        if (flag_B_1 == 4) {
-            flag_B_3 = 5;
-        }
-        if (flag_W_1 == 4) {
-            flag_W_3 = 5;
-        }
+        flag_B_3 = getFlag_3_S(Black, flag_B_1, flag_B_3);
+        flag_W_3 = getFlag_3_S(White, flag_W_1, flag_W_3);
 
         //测试同花
-        for (int i = 0; i < 4; i++) {
-            if(Black[i].getSuit() == Black[i + 1].getSuit()){
-                flag_B_2++;
-            }
-        }
-        if (flag_B_2 == 4) {
-            flag_B_3 = 6;
-        }
-        for (int i = 0; i < 4; i++) {
-            if(White[i].getSuit() == White[i + 1].getSuit()){
-                flag_W_2++;
-            }
-        }
-        if (flag_W_2 == 4) {
-            flag_W_3 = 6;
-        }
+        flag_B_3 = getFlag_3_F(Black, flag_B_2, flag_B_3);
+        flag_W_3 = getFlag_3_F(White, flag_W_2, flag_W_3);
 
         //测试同花顺
-        if (flag_B_1 == 4 && flag_B_2 == 4) {
+        if (getFlag_3_S(Black, flag_B_1, flag_B_3) == 5 && getFlag_3_F(Black, flag_B_2, flag_B_3) == 6) {
             flag_B_3 = 7;
         }
-        if (flag_W_1 == 4 && flag_W_2 == 4) {
+        if (getFlag_3_S(White, flag_W_1, flag_W_3) == 5 && getFlag_3_F(White, flag_W_2, flag_W_3) == 6) {
             flag_W_3 = 7;
         }
 
@@ -146,7 +79,8 @@ public class TexasPoker {
         }
         else{
             switch (flag_B_3){
-                case 1:{
+                case 1:
+                case 6: {
                     for (int i = 4; i > -1; i--) {
                         if (Black[i].getNum() > White[i].getNum()) {
                             ResultOutput('B');
@@ -154,7 +88,7 @@ public class TexasPoker {
                         else if (Black[i].getNum() < White[i].getNum()){
                             ResultOutput('W');
                         }
-                        if (i == 1) {
+                        if (i == 0) {
                             ResultOutput('T');
                         }
                     }
@@ -280,35 +214,12 @@ public class TexasPoker {
                         ResultOutput('T');
                     }
                 }break;
-                case 5:{
+                case 5:
+                case 7: {
                     if (Black[4].getNum() > White[4].getNum()) {
                         ResultOutput('B');
                     }
                     else if (Black[4].getNum() < White[4].getNum()){
-                        ResultOutput('W');
-                    }
-                    else if (Black[4].getNum() == White[4].getNum()) {
-                        ResultOutput('T');
-                    }
-                }break;
-                case 6:{
-                    for (int i = 4; i > -1; i--) {
-                        if (Black[i].getNum() > White[i].getNum()) {
-                            ResultOutput('B');
-                        }
-                        else if (Black[i].getNum() < White[i].getNum()){
-                            ResultOutput('W');
-                        }
-                        if (i == 0) {
-                            ResultOutput('T');
-                        }
-                    }
-                }break;
-                case 7:{
-                    if (Black[4].getNum() > White[4].getNum()) {
-                        ResultOutput('B');
-                    }
-                    else if (Black[4].getNum() < White[4].getNum()) {
                         ResultOutput('W');
                     }
                     else if (Black[4].getNum() == White[4].getNum()) {
@@ -320,7 +231,64 @@ public class TexasPoker {
         return;
     }
 
-    public static int CharToInt(char x){
+    private static int getFlag_3_P(Poker[] pokers, int flag_1, int flag_3) {
+        flag_1 = 0;
+        for (int i = 0; i < 4; i++) {
+            if(pokers[i].getNum() == pokers[i + 1].getNum()){
+                flag_1++;
+                i++;
+            }
+        }
+        if (flag_1 == 1) {
+            flag_3 = 2;
+        }
+        else if (flag_1 == 2) {
+            flag_3 = 3;
+        }
+        return flag_3;
+    }
+
+    private static int getFlag_3_T(Poker[] pokers, int flag_1, int flag_3) {
+        flag_1 = 0;
+        for (int i = 0; i < 3; i++) {
+            if(pokers[i].getNum() == pokers[i + 1].getNum() && pokers[i].getNum() == pokers[i + 2].getNum()){
+                flag_1++;
+            }
+        }
+        if (flag_1 == 1) {
+            flag_3 = 4;
+        }
+        return flag_3;
+    }
+
+    private static int getFlag_3_S(Poker[] pokers, int flag_1, int flag_3) {
+        flag_1 = 0;
+        for (int i = 0; i < 4; i++) {
+            if(pokers[i].getNum() == pokers[i + 1].getNum() - 1){
+                flag_1++;
+            }
+        }
+        if (flag_1 == 4) {
+            flag_3 = 5;
+        }
+        return flag_3;
+    }
+
+    private static int getFlag_3_F(Poker[] pokers, int flag_2, int flag_3) {
+        flag_2 = 0;
+        for (int i = 0; i < 4; i++) {
+            if(pokers[i].getSuit() == pokers[i + 1].getSuit()){
+                flag_2++;
+            }
+        }
+        if (flag_2 == 4) {
+            flag_3 = 6;
+        }
+        return flag_3;
+    }
+
+
+    private static int CharToInt(char x){
         switch(x){
             case '2':;
             case '3':;
@@ -340,7 +308,7 @@ public class TexasPoker {
         return 0;
     }
 
-    public static void ResultOutput(char ch){
+    private static void ResultOutput(char ch){
         if (ch == 'B') {
             System.out.println("Black wins");
         }

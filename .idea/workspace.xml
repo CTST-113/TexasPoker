@@ -16,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -33,11 +34,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaProject[IDEA][HF]" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="TexasPoker" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.TexasPoker">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -104,7 +116,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593088083512</updated>
-      <workItem from="1593088087488" duration="13906000" />
+      <workItem from="1593088087488" duration="18364000" />
     </task>
     <servers />
   </component>
@@ -112,10 +124,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1593092777841">
+    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1593345972827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1593092777841" />
+    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1593345972827" />
     <state x="538" y="186" width="983" height="566" key="DiffContextDialog" timestamp="1593099785806">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -124,26 +136,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="840" y="247" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1593089155515" />
-    <state width="1125" height="180" key="GridCell.Tab.0.bottom" timestamp="1593100530930">
+    <state width="1493" height="180" key="GridCell.Tab.0.bottom" timestamp="1593349018721">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1125" height="180" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593100530930" />
-    <state width="1125" height="180" key="GridCell.Tab.0.center" timestamp="1593100530930">
+    <state width="1493" height="180" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593349018721" />
+    <state width="1493" height="180" key="GridCell.Tab.0.center" timestamp="1593349018720">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1125" height="180" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593100530930" />
-    <state width="1125" height="180" key="GridCell.Tab.0.left" timestamp="1593100530930">
+    <state width="1493" height="180" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593349018720" />
+    <state width="1493" height="180" key="GridCell.Tab.0.left" timestamp="1593349018720">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1125" height="180" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593100530930" />
-    <state width="1125" height="180" key="GridCell.Tab.0.right" timestamp="1593100530930">
+    <state width="1493" height="180" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593349018720" />
+    <state width="1493" height="180" key="GridCell.Tab.0.right" timestamp="1593349018720">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1125" height="180" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593100530930" />
-    <state x="891" y="261" key="extract.method.dialog" timestamp="1593096013708">
+    <state width="1493" height="180" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593349018720" />
+    <state x="540" y="130" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1593346001070">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="891" y="261" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1593096013708" />
+    <state x="540" y="130" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1593346001070" />
+    <state x="891" y="261" key="extract.method.dialog" timestamp="1593345898574">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="891" y="261" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1593345898574" />
     <state x="652" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1593343855670">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
